@@ -1,0 +1,11 @@
+.employee-list {
+  width: 100%;
+  float: left;
+}
+
+.emp-column {
+  width: 16%;
+  float: left;
+  line-height: 100%;
+  height: 30px;
+}

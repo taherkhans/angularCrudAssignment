@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem;" *ngIf='employee'>
+  <div class="card-body">
+    <h5 class="card-title">{{employee.firstName}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{employee.lastName}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{employee.company}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{employee.email}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{employee.gender}}</h6>
+  </div>
+  <div class="card-footer">
+    <button type="button" [routerLink]="['/employee-list']" class="btn btn-primary"
+      routerLinkActive="router-link-active">back to employee
+      list</button>
+  </div>
+</div>

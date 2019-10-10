@@ -1,0 +1,22 @@
+.employee-list {
+  width: 100%;
+  float: left;
+}
+
+.emp-column {
+  width: 16%;
+  float: left;
+  line-height: 80px;
+  height: 80px;
+}
+
+.modal-box {
+  width: 300px;
+  height: 200px;
+  background: #fff;
+  border: 2px solid #ccc;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0px 0px -150px;
+}

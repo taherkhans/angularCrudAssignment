@@ -1,0 +1,49 @@
+{
+  "employees": [
+    {
+      "id": 3,
+      "age": 21,
+      "firstName": "suresh2",
+      "lastName": "Pulonl",
+      "eyecolor": "black",
+      "company": "neu",
+      "email": "neu@neudesic.com",
+      "gender": "female",
+      "location": "2",
+      "phone": 9999999999,
+      "address": "tolichowki",
+      "designation": "web developer",
+      "photoPath": "../../assets/images/Suresh.png"
+    },
+    {
+      "id": 5,
+      "age": null,
+      "firstName": "afd",
+      "lastName": "dsf",
+      "eyecolor": null,
+      "company": "dsf",
+      "email": "suresh@neudesic.com",
+      "gender": "male",
+      "location": "2",
+      "phone": null,
+      "address": null,
+      "designation": null,
+      "photoPath": "../../assets/images/Bala.png"
+    },
+    {
+      "id": 6,
+      "age": null,
+      "firstName": "afd",
+      "lastName": "dfsd",
+      "eyecolor": null,
+      "company": "sdf",
+      "email": "mohammed.taher@neudesic.com",
+      "gender": "male",
+      "location": "1",
+      "phone": null,
+      "address": null,
+      "designation": null,
+      "photoPath": "../../assets/images/SamO.png"
+    }
+  ]
+}

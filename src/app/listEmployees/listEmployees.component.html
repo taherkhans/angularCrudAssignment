@@ -1,0 +1,29 @@
+<div class="row mt-3">
+  <div class="col-md-12 mb-3">
+    <div class="row">
+
+      <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="search by employee name" [(ngModel)]="searchbyName">
+      </div>
+      <div class="col ml-auto">
+        <button class="btn btn-primary float-right" routerLink='/edit/0'>create employee</button>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="employee-list">
+      <div class="emp-column">emp id</div>
+      <div class="emp-column">first name</div>
+      <div class="emp-column">last name</div>
+      <div class="emp-column">company</div>
+      <div class="emp-column">email</div>
+      <div class="emp-column"></div>
+    </div>
+    <div class="employee-list" *ngFor="let employee of employees | employeeFilter: searchbyName">
+      <div>
+        <app-employee [employee]='employee'></app-employee>
+      </div>
+    </div>
+  </div>
+</div>

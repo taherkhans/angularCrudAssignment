@@ -1,0 +1,100 @@
+<form #employeeForm='ngForm' (ngSubmit)="saveEmployee()">
+  <div *ngIf='employee'>
+    <div class="row">
+      <div class="col-md-6">
+        <h1>{{formTitle}}</h1>
+      </div>
+      <div class="col-md-6">
+        <button class="btn btn-danger" (click)='deleteEmployee()'>delete</button>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-4">
+        <div class="form-group" [class.is-invalid]="firstNameControl.touched && firstNameControl.invalid"
+          [class.is-valid]='firstNameControl.valid'>
+          <label class="control-label">First Name</label>
+          <input type="text" class="form-control" name="firstName" required [(ngModel)]="employee.firstName"
+            #firstNameControl='ngModel' />
+          <span class="help-block" *ngIf='firstNameControl.touched && firstNameControl.invalid'>This feild is
+            required</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" class="form-control" name="lastName" [(ngModel)]="employee.lastName" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>company</label>
+          <input type="text" name='company' class="form-control" [(ngModel)]="employee.company" />
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group" [class.is-invalid]='email.invalid && email.touched'>
+          <label class="control-label">email</label>
+          <input type="text" name="email" class="form-control" required
+            pattern="^[a-zA-Z0-9_.+-]+@(?:(?:[a-zA-Z0-9-]+\.)?[a-zA-Z]+\.)?(neudesic)\.com$" #email="ngModel"
+            [(ngModel)]="employee.email" />
+          <span class="is-invalid" *ngIf="email.errors?.required && email.touched">Email is required</span>
+          <span class="is-invalid" *ngIf="email.errors?.pattern && email.touched">Email is invalid</span>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center" [class.is-invalid]="gender.invalid && gender.touched">
+      <div class="col-md-4">
+        <div class="custom-control custom-radio">
+          <input type="radio" id="male" required name="gender" value="male" #gender="ngModel"
+            class="custom-control-input" [(ngModel)]="employee.gender">
+          <label class="custom-control-label" for="male">Male</label>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="custom-control custom-radio">
+          <input type="radio" id="female" required name="gender" value="female" #gender="ngModel"
+            class="custom-control-input" [(ngModel)]="employee.gender">
+          <label class="custom-control-label" for="female">Female</label>
+        </div>
+      </div>
+      <div class="col-md-8" *ngIf="gender.invalid && gender.touched">
+        <span class="is-invalid">This feild is required</span>
+      </div>
+    </div>
+
+    <div class="row justify-content-center" [class.is-invalid]="location.invalid && location.touched">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="male">location</label>
+          <select class="form-control" [(ngModel)]='employee.location' required name='location' #location='ngModel'>
+            <option [ngValue]='null'>select location</option>
+            <option *ngFor="let location of locations" [value]='location.id'>{{location.location}}</option>
+
+          </select>
+          <span class="invalid" *ngIf="location.invalid && location.touched">location is required</span>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label>date of birth</label>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-right">
+        <button type="button" class="btn btn-secondary" [routerLink]="['/employee-list']">Cancel</button>
+        <button type="submit" [disabled]='!employeeForm.valid' class="btn btn-primary">Add Employee</button>
+      </div>
+    </div>
+  </div>
+</form>
+{{employeeForm.value | json}}
+{{employee | json}}

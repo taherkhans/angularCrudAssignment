@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": {
+            "first": "Rakesh",
+            "last": "Chintha"
+        },
+        "company": "Neudesic",
+        "email": "rakesh.chintha@neudesic.com"
+    },
+    {
+        "id": 2,
+        "name": {
+            "first": "Chandra",
+            "last": "Leblanc"
+        },
+        "company": "CORPULSE",
+        "email": "chandra.leblanc@corpulse.name"
+    },
+    {
+        "id": 3,
+        "name": {
+            "first": "Duffy",
+            "last": "Rasmussen"
+        },
+        "company": "ZAGGLES",
+        "email": "duffy.rasmussen@zaggles.biz"
+    },
+    {
+        "id": 4,
+        "name": {
+            "first": "Adkins",
+            "last": "Walsh"
+        },
+        "company": "UTARA",
+        "email": "adkins.walsh@utara.io"
+    },
+    {
+        "id": 5,
+        "name": {
+            "first": "Marks",
+            "last": "Franklin"
+        },
+        "company": "ZANILLA",
+        "email": "marks.franklin@zanilla.org"
+    },
+    {
+        "id": 6,
+        "name": {
+            "first": "Test",
+            "last": "Yoyo"
+        },
+        "company": null,
+        "email": "test@tets.com"
+    }
+]

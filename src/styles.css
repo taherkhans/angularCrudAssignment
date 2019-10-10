@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+.form-control{
+    height: auto;
+    padding:4px;
+    border-radius: 0px;
+}
+.form-group{
+    margin-bottom: 20px;
+    position: relative;
+}
+.form-group .text-danger{
+    position: absolute;
+    font-size: 13px;
+}
+.btn{
+    border-radius: 0px;
+    margin-left: 10px;
+}
+.emp-id{
+    cursor: pointer;
+}
